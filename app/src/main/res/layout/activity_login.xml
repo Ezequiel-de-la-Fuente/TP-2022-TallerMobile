@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <include
+            android:id="@+id/toolbarLogin"
+            layout="@layout/primary_toolbar">
+        </include>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingresar usuario"
+            android:textSize="7pt"></TextView>
+        <EditText
+            android:id="@+id/etUserName"
+            android:hint="John Tittor"
+            android:textSize="10pt"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20pt"
+            android:layout_height="wrap_content"></EditText>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingresar contraseña"
+            android:layout_marginTop="5pt"
+            android:textSize="7pt"></TextView>
+        <EditText
+            android:id="@+id/etPassword"
+            android:hint="1234"
+            android:textSize="10pt"
+            android:inputType="numberPassword"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="20pt"
+            android:layout_height="wrap_content"></EditText>
+        <CheckBox
+            android:id="@+id/cbRememberUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recordar Usuario"
+            android:textSize="7pt"
+            ></CheckBox>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10pt"
+            >
+            <Button
+                android:id="@+id/btnCreateUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="CREAR USUARIO"
+                android:layout_marginEnd="3pt"></Button>
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="INICIAR SESION"
+                android:layout_marginStart="3pt"></Button>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
