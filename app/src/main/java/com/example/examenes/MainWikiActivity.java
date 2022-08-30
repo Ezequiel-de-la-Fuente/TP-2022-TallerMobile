@@ -2,6 +2,7 @@ package com.example.examenes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -22,8 +23,9 @@ public class MainWikiActivity extends AppCompatActivity {
         goToMovie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: Hacer lista de peliculas
-                Toast.makeText(MainWikiActivity.this, "Peliculas", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainWikiActivity.this, MoviesActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
         goToCharacters.setOnClickListener(new View.OnClickListener() {
