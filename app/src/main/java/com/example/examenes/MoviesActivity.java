@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,7 +23,7 @@ import java.util.List;
 public class MoviesActivity extends AppCompatActivity {
     private RecyclerView rvMovieList;
     private MovieAdapter adapter;
-
+    //TODO: Cambiar el margen horizontal en pantallas mas grandes
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +41,9 @@ public class MoviesActivity extends AppCompatActivity {
             adapter = new MovieAdapter(getPlaceHolders(), new MovieAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(Movie movie) {
-                    Toast.makeText(MoviesActivity.this, movie.getTitle(), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MoviesActivity.this, MovieDetailActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
             });
             rvMovieList.setAdapter(adapter);
