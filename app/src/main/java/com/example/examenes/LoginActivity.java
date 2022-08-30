@@ -1,19 +1,16 @@
 package com.example.examenes;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.examenes.helper.Menu;
 
@@ -51,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Completar datos",Toast.LENGTH_SHORT).show();
                     return;
                 }*/
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MainWikiActivity.class);
                 intent.putExtra("USER_NAME", etUserName.getText().toString());
                 startActivity(intent);
             }
