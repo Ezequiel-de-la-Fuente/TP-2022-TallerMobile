@@ -9,6 +9,11 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.examenes.helper.Menu;
@@ -23,6 +28,7 @@ import java.util.List;
 public class MoviesActivity extends AppCompatActivity {
     private RecyclerView rvMovieList;
     private MovieAdapter adapter;
+    private int count=30;
     //TODO: Cambiar el margen horizontal en pantallas mas grandes
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +36,23 @@ public class MoviesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_movies);
         Menu.Init(this, R.id.toolbarMovies);
         setupAdapter();
+        Spinner dropdown = findViewById(R.id.spinnerMovies);
+        String[] items = new String[]{"5", "20", "50", "100", "250"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        dropdown.setAdapter(adapter);
+        dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                Object item = adapterView.getItemAtPosition(i);
+                count = Integer.parseInt(item.toString());
+                MoviesActivity.this.adapter.set(getPlaceHolders(count));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
     }
 
     private void setupAdapter() {
@@ -38,7 +61,7 @@ public class MoviesActivity extends AppCompatActivity {
         if(rvMovieList !=null){
             RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, numberOfColumns);
             rvMovieList.setLayoutManager((layoutManager));
-            adapter = new MovieAdapter(getPlaceHolders(), new MovieAdapter.OnItemClickListener() {
+            adapter = new MovieAdapter(getPlaceHolders(count), new MovieAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(Movie movie) {
                     Intent intent = new Intent(MoviesActivity.this, MovieDetailActivity.class);
@@ -66,9 +89,9 @@ public class MoviesActivity extends AppCompatActivity {
         super.onStart();
     }
 
-    private List<Movie> getPlaceHolders() {
+    private List<Movie> getPlaceHolders(int count) {
         ArrayList<Movie> movies = new ArrayList<>();
-        for(int i=0;i<30;i++){
+        for(int i=0;i<count;i++){
             String id = Integer.toString(i);
             movies.add(new Movie(id, "PlaceHolder_"+id, "", null));
         }

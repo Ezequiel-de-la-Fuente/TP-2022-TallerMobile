@@ -22,7 +22,16 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieViewHolder>{
         this.movieList = movieList;
         this.onItemClickListener = onItemClickListener;
     }
-
+    public  void clear(){
+        int size = movieList.size();
+        movieList.clear();
+        notifyItemRangeRemoved(0, size);
+    }
+    public  void set(List<Movie> movieList){
+        clear();
+        this.movieList = movieList;
+        notifyItemRangeInserted(0, this.movieList.size());
+    }
     @NonNull
     @Override
     public MovieViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
