@@ -18,57 +18,90 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ingresar usuario"
-            android:textSize="7pt"></TextView>
+            android:text="LOGIN"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            android:textFontWeight="700"
+            android:textColor="@color/cus_blue"
+            ></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usuario"
+            android:layout_marginStart="35dp"
+            android:layout_gravity="start"
+            android:textColor="@color/cus_blue"
+            android:textSize="13sp"
+            ></TextView>
         <EditText
             android:id="@+id/etUserName"
             android:hint="John Tittor"
-            android:textSize="10pt"
+            android:textSize="16sp"
             android:layout_width="match_parent"
-            android:layout_marginHorizontal="20pt"
+            android:layout_marginHorizontal="30dp"
+            android:backgroundTint="@color/cus_blue"
+            android:lines="1"
+            android:inputType="text"
             android:layout_height="wrap_content"></EditText>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ingresar contraseña"
-            android:layout_marginTop="5pt"
-            android:textSize="7pt"></TextView>
-        <EditText
-            android:id="@+id/etPassword"
-            android:hint="1234"
-            android:textSize="10pt"
-            android:inputType="numberPassword"
+            android:text="Contraseña"
+            android:layout_marginStart="35dp"
+            android:layout_gravity="start"
+            android:textColor="@color/cus_blue"
+            android:textSize="13sp"
+            ></TextView>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginHorizontal="20pt"
-            android:layout_height="wrap_content"></EditText>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_marginHorizontal="30dp"
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="Enter Password"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:backgroundTint="@color/cus_blue"
+                android:textSize="16sp" />
+            <ImageButton
+                android:id="@+id/ibChangePasswordVisibility"
+                android:layout_marginLeft="-90dp"
+                style="?android:buttonBarButtonStyle"
+                android:paddingBottom="5dp"
+                android:src="@drawable/ic_baseline_visibility_off_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
         <CheckBox
             android:id="@+id/cbRememberUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Recordar Usuario"
-            android:textSize="7pt"
+            android:buttonTint="@color/cus_blue"
+            android:layout_marginStart="30dp"
+            android:textSize="16sp"
+            android:layout_gravity="start"
             ></CheckBox>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:weightSum="1"
-            android:orientation="horizontal"
-            android:layout_marginHorizontal="10pt"
-            >
-            <Button
-                android:id="@+id/btnCreateUser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:text="CREAR USUARIO"
-                android:layout_marginEnd="3pt"></Button>
-            <Button
-                android:id="@+id/btnLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:text="INICIAR SESION"
-                android:layout_marginStart="3pt"></Button>
-        </LinearLayout>
+        <Button
+            android:id="@+id/btnLogin"
+            android:backgroundTint="@color/cus_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INICIAR SESION"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="45dp"></Button>
+        <TextView
+            android:id="@+id/btnCreateUser"
+            android:layout_width="wrap_content"
+            android:textColor="@color/cus_blue"
+            android:layout_marginHorizontal="45dp"
+            android:text="¿No tienes una cuenta? Registrate"
+            android:layout_height="wrap_content"></TextView>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

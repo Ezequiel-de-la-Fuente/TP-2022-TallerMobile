@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/drawable/ic_baseline_visibility_24.xml" value="0.1" />
         <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/activity_agregar_examen.xml" value="0.1" />
         <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/activity_calcular_promedio.xml" value="0.1" />
         <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/activity_login.xml" value="0.1" />
