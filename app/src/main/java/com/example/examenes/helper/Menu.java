@@ -11,6 +11,6 @@ public class Menu {
         Toolbar toolbar = activity.findViewById(id);
         activity.setSupportActionBar(toolbar);
         ActionBar actionBar = activity.getSupportActionBar();
-        actionBar.setTitle("Mis examenes");
+        actionBar.setTitle("Studio Ghibli");
     }
 }

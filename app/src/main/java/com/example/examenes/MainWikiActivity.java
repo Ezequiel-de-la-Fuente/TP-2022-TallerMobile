@@ -23,6 +23,7 @@ public class MainWikiActivity extends AppCompatActivity {
         goToMovie.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(MainWikiActivity.this, "Peliculas", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainWikiActivity.this, MoviesActivity.class);
                 startActivity(intent);
                 finish();
@@ -31,8 +32,10 @@ public class MainWikiActivity extends AppCompatActivity {
         goToCharacters.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: Hacer lista de personajes
                 Toast.makeText(MainWikiActivity.this, "Personajes", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainWikiActivity.this, CharactersActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
