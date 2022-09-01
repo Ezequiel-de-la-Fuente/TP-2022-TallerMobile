@@ -15,7 +15,7 @@
             android:background="@color/cus_white"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:src="@drawable/ic_baseline_movie_24"
+            android:src="@drawable/ic_baseline_person_24"
             >
         </ImageView>
         <TextView
