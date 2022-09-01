@@ -37,4 +37,5 @@ Nulla facilisi. Duis eleifend hendrerit eros, mattis tristique metus commodo non
     <string name="enter_user">Ingrese usuario</string>
     <string name="create_account">CREAR CUENTA</string>
     <string name="login_EN">Login</string>
+    <string name="wiki">Wiki</string>
 </resources>
