@@ -24,6 +24,12 @@ public class CharactersActivity extends AppCompatActivity {
     private RecyclerView rvCharactersList;
     private CharacterAdapter adapter;
     private int count=30;
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(CharactersActivity.this, MainWikiActivity.class);
+        startActivity(intent);
+        finish();
+    }
     //TODO: Cambiar el margen horizontal en pantallas mas grandes
     @Override
     protected void onCreate(Bundle savedInstanceState) {

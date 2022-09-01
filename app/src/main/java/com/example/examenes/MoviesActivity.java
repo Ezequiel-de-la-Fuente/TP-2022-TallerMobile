@@ -25,6 +25,14 @@ public class MoviesActivity extends AppCompatActivity {
     private MovieAdapter adapter;
     private int count=30;
     //TODO: Cambiar el margen horizontal en pantallas mas grandes
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(MoviesActivity.this, MainWikiActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
