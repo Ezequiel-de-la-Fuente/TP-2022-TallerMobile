@@ -60,7 +60,7 @@
                    android:layout_width="match_parent"
                    android:layout_marginHorizontal="30dp"
                    android:layout_height="200dp"
-                   android:src="@drawable/ic_baseline_movie_24"
+                   android:src="@drawable/ic_baseline_person_24"
                    >
                </ImageView>
                <TextView
