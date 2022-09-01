@@ -2,23 +2,18 @@ package com.example.examenes;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.example.examenes.helper.Menu;
-import com.example.examenes.list.Examen;
-import com.example.examenes.list.ExamenAdapter;
 import com.example.examenes.list.movie.Movie;
 import com.example.examenes.list.movie.MovieAdapter;
 

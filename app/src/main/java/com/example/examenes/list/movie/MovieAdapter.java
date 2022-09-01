@@ -9,8 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.examenes.R;
-import com.example.examenes.list.Examen;
-import com.example.examenes.list.ExamenViewHolder;
 
 import java.util.List;
 

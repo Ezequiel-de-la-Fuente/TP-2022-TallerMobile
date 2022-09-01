@@ -29,15 +29,6 @@
             android:name=".MainWikiActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CalcularPromedioActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AgregarExamenActivity"
-            android:exported="false" />
-        <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
@@ -47,7 +38,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TermsAndConditionsActivity"
+            android:name=".RegistrationActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
