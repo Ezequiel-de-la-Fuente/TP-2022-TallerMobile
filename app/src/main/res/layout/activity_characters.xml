@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:text="Personajes"
+                android:text="@string/characters"
                 android:layout_gravity="center"
                 android:textSize="40sp"
                 >
@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:text="Mostrar "
+                    android:text="@string/show"
                     android:textSize="20sp"
                     ></TextView>
                 <Spinner
@@ -56,7 +56,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:textSize="20sp"
-                    android:text=" elementos."
+                    android:text="@string/elements"
                     ></TextView>
             </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView

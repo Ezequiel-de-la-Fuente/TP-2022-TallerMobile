@@ -3,38 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1" />
+        <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/drawable/ic_baseline_visibility_24.xml" value="0.1" />
+        <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/drawable/layout_border.xml" value="0.1" />
         <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/activity_agregar_examen.xml" value="0.1" />
         <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/activity_calcular_promedio.xml" value="0.1" />
+        <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/activity_characters.xml" value="0.25271739130434784" />
         <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/activity_main_wiki.xml" value="0.1" />
+        <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/activity_movie_detail.xml" value="0.1" />
+        <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/activity_movies.xml" value="0.1" />
+        <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/activity_registration.xml" value="0.25271739130434784" />
         <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
         <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/activity_terms_and_conditions.xml" value="0.1" />
+        <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/item_character.xml" value="0.25271739130434784" />
         <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/item_examen.xml" value="0.1" />
         <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/layout/primary_toolbar.xml" value="0.1" />
         <entry key="..\:/Users/ezequ/AndroidStudioProjects/Examenes/app/src/main/res/menu/menu_main.xml" value="0.1" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.251" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/drawable/ic_baseline_movie_24.xml" value="0.251" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.251" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/drawable/ic_baseline_visibility_24.xml" value="0.251" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/drawable/ic_baseline_visibility_off_24.xml" value="0.251" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/drawable/ic_launcher_background.xml" value="0.251" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/layout/activity_agregar_examen.xml" value="0.17831813576494426" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/layout/activity_calcular_promedio.xml" value="0.17831813576494426" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/layout/activity_character_detail.xml" value="0.352" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/layout/activity_characters.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/layout/activity_main_wiki.xml" value="0.17831813576494426" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/layout/activity_movie_detail.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/layout/activity_movies.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/layout/activity_registration.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/layout/activity_splash_screen.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/layout/activity_terms_and_conditions.xml" value="0.17831813576494426" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/layout/item_character.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/layout/item_examen.xml" value="0.17831813576494426" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/layout/item_movie.xml" value="0.17831813576494426" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/layout/primary_toolbar.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/rricciardulli/Desktop/UNLa/TP-2022-TallerMobile/app/src/main/res/menu/menu_main.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
