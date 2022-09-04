@@ -32,7 +32,7 @@ public class MainWikiActivity extends AppCompatActivity {
         goToCharacters.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+
                 Intent intent = new Intent(MainWikiActivity.this, CharactersActivity.class);
                 startActivity(intent);
                 finish();
