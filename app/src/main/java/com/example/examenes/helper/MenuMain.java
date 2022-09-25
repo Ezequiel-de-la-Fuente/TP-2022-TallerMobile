@@ -6,7 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.examenes.R;
 
-public class Menu {
+public class MenuMain {
     public static  void Init(AppCompatActivity activity, int id){
         Toolbar toolbar = activity.findViewById(id);
         activity.setSupportActionBar(toolbar);

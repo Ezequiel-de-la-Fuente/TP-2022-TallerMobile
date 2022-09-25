@@ -3,8 +3,8 @@
 
     <!-- "Mark Favorite", should appear as action button if possible -->
     <item
-        android:id="@+id/item_agregar"
-        android:icon="@android:drawable/ic_menu_add"
+        android:id="@+id/item_inicio"
+        android:icon="@drawable/ic_baseline_home_24"
         android:title="Agregar"
-        app:showAsAction="never"/>
+        app:showAsAction="always"/>
 </menu>

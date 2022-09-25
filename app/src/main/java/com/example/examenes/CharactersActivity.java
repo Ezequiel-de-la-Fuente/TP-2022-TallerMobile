@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.examenes.helper.Menu;
+import com.example.examenes.helper.MenuMain;
 import com.example.examenes.list.character.Character;
 import com.example.examenes.list.character.CharacterAdapter;
 
@@ -35,7 +37,7 @@ public class CharactersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_characters);
-        Menu.Init(this, R.id.toolbarCharacters);
+        MenuMain.Init(this, R.id.toolbarCharacters);
         setupAdapter();
         Spinner dropdown = findViewById(R.id.spinnerCharacters);
         String[] items = new String[]{"5", "20", "50", "100", "250"};
@@ -101,5 +103,19 @@ public class CharactersActivity extends AppCompatActivity {
     }
     public static int getScreenWidth() {
         return Resources.getSystem().getDisplayMetrics().widthPixels;
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.item_inicio) {
+            Intent intent = new Intent(CharactersActivity.this, MainWikiActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

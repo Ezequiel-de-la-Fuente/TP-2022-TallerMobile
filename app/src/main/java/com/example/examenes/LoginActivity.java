@@ -5,14 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.example.examenes.helper.Menu;
+import com.example.examenes.helper.MenuMain;
+import com.example.examenes.user.User;
+import com.example.examenes.user.UserManager;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText etUserName;
@@ -32,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         btnCreateUser = findViewById(R.id.btnCreateUser);
         btnLogin = findViewById(R.id.btnLogin);
         ibChangePasswordVisibility = findViewById(R.id.ibChangePasswordVisibility);
-        Menu.Init(this, R.id.toolbarLogin);
+        MenuMain.Init(this, R.id.toolbarLogin);
 
         this.btnCreateUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,13 +51,14 @@ public class LoginActivity extends AppCompatActivity {
         this.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*if(!isValid()){
-                    Toast.makeText(LoginActivity.this, "Completar datos",Toast.LENGTH_SHORT).show();
-                    return;
-                }*/
-                Intent intent = new Intent(LoginActivity.this, MainWikiActivity.class);
-                intent.putExtra("USER_NAME", etUserName.getText().toString());
-                startActivity(intent);
+                if (checkUserExistence(etUserName.toString(), etPassword.toString())){
+                    Intent intent = new Intent(LoginActivity.this, MainWikiActivity.class);
+                    startActivity(intent);
+                } else {
+                    etUserName.setText("");
+                    etPassword.setText("");
+                    Toast.makeText(LoginActivity.this, "Usuario o Contraseña incorrecta", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         ibChangePasswordVisibility.setOnClickListener(new View.OnClickListener() {
@@ -69,9 +77,32 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    private boolean checkUserExistence(String username, String password) {
+        boolean exists = false;
+        Log.i("Info", "Valor Informacion");
+        if(isValid()){
+            Log.i("Info", "Valor wirh");
+            for(User user : getUsuarios()){
+                Log.i("Info", user.toString());
+                if(user.getUsername().equals(etUserName.getText().toString()) && user.getPassword().equals(etPassword.getText().toString()))
+                    exists = true;
+            }
+        }
+        return exists;
+    }
+
     private boolean isValid() {
         String userName = etUserName.getText().toString();
         String password = etPassword.getText().toString();
         return !userName.isEmpty() && !password.isEmpty();
+    }
+
+    private List<User> getUsuarios() {
+        try {
+            return UserManager.getInstance(this).getUsuarios();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ArrayList();
+        }
     }
 }

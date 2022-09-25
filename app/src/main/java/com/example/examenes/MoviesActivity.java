@@ -8,12 +8,13 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import com.example.examenes.helper.Menu;
+import com.example.examenes.helper.MenuMain;
 import com.example.examenes.list.movie.Movie;
 import com.example.examenes.list.movie.MovieAdapter;
 
@@ -37,7 +38,7 @@ public class MoviesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movies);
-        Menu.Init(this, R.id.toolbarMovies);
+        MenuMain.Init(this, R.id.toolbarMovies);
         setupAdapter();
         Spinner dropdown = findViewById(R.id.spinnerMovies);
         String[] items = new String[]{"5", "20", "50", "100", "250"};
@@ -103,5 +104,20 @@ public class MoviesActivity extends AppCompatActivity {
     }
     public static int getScreenWidth() {
         return Resources.getSystem().getDisplayMetrics().widthPixels;
+    }
+
+
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.item_inicio) {
+            Intent intent = new Intent(MoviesActivity.this, MainWikiActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

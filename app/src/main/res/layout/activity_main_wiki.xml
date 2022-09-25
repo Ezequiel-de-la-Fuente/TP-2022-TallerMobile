@@ -18,6 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -26,8 +27,7 @@
                 android:gravity="center"
                 android:textSize="30sp"
                 android:textColor="@color/black"
-                android:text="@string/wiki"
-                ></TextView>
+                android:text="@string/wiki" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -49,6 +49,7 @@
                         android:src="@drawable/ic_baseline_movie_24"
                         >
                     </ImageView>
+
                     <TextView
                         android:background="@color/cus_white"
                         android:layout_width="match_parent"
@@ -56,8 +57,7 @@
                         android:gravity="center"
                         android:textSize="20sp"
                         android:layout_marginVertical="3dp"
-                        android:text="@string/movies"
-                        ></TextView>
+                        android:text="@string/movies" />
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/goToCharacters"
@@ -73,6 +73,7 @@
                         android:src="@drawable/ic_baseline_person_24"
                         >
                     </ImageView>
+
                     <TextView
                         android:background="@color/cus_white"
                         android:layout_width="match_parent"
@@ -80,8 +81,7 @@
                         android:gravity="center"
                         android:textSize="20sp"
                         android:layout_marginVertical="3dp"
-                        android:text="@string/characters"
-                        ></TextView>
+                        android:text="@string/characters" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

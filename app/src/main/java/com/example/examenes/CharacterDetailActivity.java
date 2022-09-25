@@ -2,10 +2,11 @@ package com.example.examenes;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.examenes.helper.Menu;
+import com.example.examenes.helper.MenuMain;
 
 public class CharacterDetailActivity extends AppCompatActivity {
 
@@ -19,6 +20,20 @@ public class CharacterDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_detail);
-        Menu.Init(this, R.id.toolbarCharacterDetail);
+        MenuMain.Init(this, R.id.toolbarCharacterDetail);
+    }
+
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.item_inicio) {
+            Intent intent = new Intent(CharacterDetailActivity.this, MainWikiActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

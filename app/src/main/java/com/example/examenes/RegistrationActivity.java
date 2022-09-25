@@ -5,22 +5,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.examenes.helper.Menu;
+import com.example.examenes.helper.MenuMain;
+import com.example.examenes.user.User;
+import com.example.examenes.user.UserManager;
 
 public class RegistrationActivity extends AppCompatActivity {
-    private EditText etRegistrationUserName;
-    private EditText etRegistrationPassword;
-    private Button btnRegistrationCreateAccount;
+
+    EditText etRegistrationUserName;
+    EditText etRegistrationPassword;
+    Button btnRegistrationCreateAccount;
     private ImageButton ibRegistrationChangePasswordVisibility;
     private boolean showPassword = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,15 +32,17 @@ public class RegistrationActivity extends AppCompatActivity {
         etRegistrationPassword = findViewById(R.id.etRegistrationPassword);
         btnRegistrationCreateAccount = findViewById(R.id.btnRegistrationCreateAccount);
         ibRegistrationChangePasswordVisibility = findViewById(R.id.ibRegistrationChangePasswordVisibility);
-        Menu.Init(this, R.id.toolbarRegistration);
+        MenuMain.Init(this, R.id.toolbarRegistration);
 
-        this.btnRegistrationCreateAccount.setOnClickListener(new View.OnClickListener() {
+        btnRegistrationCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*if(!isValid()){
-                    Toast.makeText(LoginActivity.this, "Completar datos",Toast.LENGTH_SHORT).show();
+                if(!isValid()){
+                    Toast.makeText(RegistrationActivity.this, "Completar datos",Toast.LENGTH_SHORT).show();
                     return;
-                }*/
+                }
+                User user = new User();
+                agregarUsuario();
                 Intent intent = new Intent(RegistrationActivity.this, MainWikiActivity.class);
                 intent.putExtra("USER_NAME", etRegistrationUserName.getText().toString());
                 startActivity(intent);
@@ -60,8 +65,24 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     private boolean isValid() {
-        String userName = etRegistrationUserName.getText().toString();
+        String username = etRegistrationUserName.getText().toString();
         String password = etRegistrationPassword.getText().toString();
-        return !userName.isEmpty() && !password.isEmpty();
+        return !username.isEmpty() && !password.isEmpty();
+    }
+
+    private void agregarUsuario() {
+        User user = new User();
+        user.setUsername(etRegistrationUserName.getText().toString());
+        user.setPassword(etRegistrationPassword.getText().toString());
+        Log.i("Info", etRegistrationUserName.getText().toString() + " " + etRegistrationPassword.getText().toString());
+        Log.i("Info", user.getUsername() + " " + user.getPassword());
+        try {
+            UserManager.getInstance(RegistrationActivity.this).registrarUsuario(user);
+            etRegistrationUserName.setText("");
+            etRegistrationPassword.setText("");
+            Toast.makeText(RegistrationActivity.this, "Usuario registrado correctamente", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

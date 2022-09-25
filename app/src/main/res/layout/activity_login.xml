@@ -15,6 +15,7 @@
             android:id="@+id/toolbarLogin"
             layout="@layout/primary_toolbar">
         </include>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,8 +24,8 @@
             android:layout_marginBottom="20dp"
             android:textSize="20sp"
             android:textFontWeight="700"
-            android:textColor="@color/cus_blue"
-            ></TextView>
+            android:textColor="@color/cus_blue" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,8 +33,8 @@
             android:layout_marginStart="35dp"
             android:layout_gravity="start"
             android:textColor="@color/cus_blue"
-            android:textSize="13sp"
-            ></TextView>
+            android:textSize="13sp" />
+
         <EditText
             android:id="@+id/etUserName"
             android:hint="John Tittor"
@@ -45,7 +46,8 @@
             android:backgroundTint="@color/cus_blue"
             android:lines="1"
             android:inputType="text"
-            android:layout_height="wrap_content"></EditText>
+            android:layout_height="wrap_content" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,8 +56,7 @@
             android:layout_marginTop="15dp"
             android:layout_gravity="start"
             android:textColor="@color/cus_blue"
-            android:textSize="13sp"
-            ></TextView>
+            android:textSize="13sp" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -85,6 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
+
         <CheckBox
             android:id="@+id/cbRememberUser"
             android:layout_width="wrap_content"
@@ -94,8 +96,8 @@
             android:layout_marginStart="30dp"
             android:layout_marginBottom="0dp"
             android:textSize="16sp"
-            android:layout_gravity="start"
-            ></CheckBox>
+            android:layout_gravity="start" />
+
         <Button
             android:id="@+id/btnLogin"
             android:backgroundTint="@color/cus_blue"
@@ -103,13 +105,14 @@
             android:layout_height="wrap_content"
             android:text="@string/login"
             android:layout_marginBottom="8dp"
-            android:layout_marginHorizontal="45dp"></Button>
+            android:layout_marginHorizontal="45dp" />
+
         <TextView
             android:id="@+id/btnCreateUser"
             android:layout_width="wrap_content"
             android:textColor="@color/cus_blue"
             android:layout_marginHorizontal="45dp"
             android:text="@string/signup_message"
-            android:layout_height="wrap_content"></TextView>
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

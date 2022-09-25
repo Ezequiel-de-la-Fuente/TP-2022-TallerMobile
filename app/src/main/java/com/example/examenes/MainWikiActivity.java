@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.example.examenes.helper.Menu;
+import com.example.examenes.helper.MenuMain;
 
 public class MainWikiActivity extends AppCompatActivity {
     private LinearLayout goToMovie, goToCharacters;
@@ -16,7 +16,7 @@ public class MainWikiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_wiki);
-        Menu.Init(this, R.id.toolbarMainWiki);
+        MenuMain.Init(this, R.id.toolbarMainWiki);
         goToMovie = findViewById(R.id.goToMovies);
         goToCharacters = findViewById(R.id.goToCharacters);
 
