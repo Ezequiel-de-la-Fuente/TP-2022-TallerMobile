@@ -15,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.examenes.helper.MenuMain;
+import com.example.examenes.helper.SP;
+import com.example.examenes.helper.SharedPreferencesHelper;
 import com.example.examenes.user.User;
 import com.example.examenes.user.UserManager;
 
@@ -29,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnLogin;
     private ImageButton ibChangePasswordVisibility;
     private boolean showPassword = false;
+    private SharedPreferencesHelper sharedPreferencesHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +43,9 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         ibChangePasswordVisibility = findViewById(R.id.ibChangePasswordVisibility);
         MenuMain.Init(this, R.id.toolbarLogin);
-
+        sharedPreferencesHelper = new SharedPreferencesHelper(getPreferences(MODE_PRIVATE));
+        cbRememberUser.setChecked(sharedPreferencesHelper.getBoolean(SP.REMEMBER_USER));
+        etUserName.setText(sharedPreferencesHelper.getString(SP.REMEMBER_USER_USERNAME));
         this.btnCreateUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,6 +57,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (checkUserExistence(etUserName.toString(), etPassword.toString())){
+                    if(cbRememberUser.isChecked()){
+                        sharedPreferencesHelper.setBoolean(SP.REMEMBER_USER, true);
+                        sharedPreferencesHelper.setString(SP.REMEMBER_USER_USERNAME, etUserName.getText().toString());
+                    }else{
+                        sharedPreferencesHelper.setBoolean(SP.REMEMBER_USER, false);
+                        sharedPreferencesHelper.setString(SP.REMEMBER_USER_USERNAME, "");
+                    }
                     Intent intent = new Intent(LoginActivity.this, MainWikiActivity.class);
                     startActivity(intent);
                 } else {
